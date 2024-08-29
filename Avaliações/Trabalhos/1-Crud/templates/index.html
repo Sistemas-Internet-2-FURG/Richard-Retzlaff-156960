@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} - Home{% endblock %}
+
+{% block content %}
+    <div class="works">
+        {% for work in works %}
+            <div class="card work-item" data-course="{{ work.course_id }}">
+                <h2>{{ work.title }}</h2>
+                <p class="description">{{ work.description }}</p>
+                <p><strong>Disciplina:</strong> {{ work.course }}</p>
+                <p><strong>Autor:</strong> {{ work.author }}</p>
+                <p class="price">R${{ work.price }}</p>
+                <button>Comprar</button>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

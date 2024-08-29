@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} - Dashboard{% endblock %}
+
+{% block content %}
+    <div class="works">
+        {% for work in works %}
+        <div class="card my-card work-item">
+            <h2>{{ work.title }}</h2>
+            <p><strong>Disciplina:</strong> {{ work.course }}</p>
+            <p class="price">R${{ work.price }}</p>
+            <div class="actions">
+                <a href="/works/update/{{work.id}}"><button class="edit-button">Editar</button></a>
+                <a href="/works/delete/{{work.id}}"><button class="delete-button">Deletar</button></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

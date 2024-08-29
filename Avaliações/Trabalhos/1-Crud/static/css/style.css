@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding: 20px 100px;
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #333;
+  height: 9vh;
+}
+
+footer {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7vh;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #e0e0e0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #bababa;
+}
+
+nav ul li a button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: .5em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+nav ul li form button.logout-button {
+  background-color: rgb(196, 82, 82); /* Vermelho */
+  color: #fff;
+  border: none;
+  padding: .5em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li form button.logout-button:hover {
+  background-color: rgb(162, 58, 58);
+  transform: scale(1.05);
+}
+
+.content {
+  padding: 2rem;
+  margin: 20px;
+  min-height: 80vh;
+}
+
+.dashboard-works {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 250px;
+  height: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.card .description {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin: 10px 0;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+}
+
+.card p {
+  font-size: 16px;
+  color: #e0e0e0;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.card .price {
+  font-size: 18px;
+  color: #00e676;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.card button {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.card button:hover {
+  background-color: #303f9f;
+  transform: scale(1.05);
+}
+
+
+/* dashboard */
+.my-card {
+  height: 250px;
+  justify-content: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  gap: 10px; /* Espaçamento entre os botões */
+  width: 100%; /* Garantir que a seção de ações ocupe a largura total do item */
+}
+
+.actions .delete-button {
+  background-color: rgb(196, 82, 82);
+}
+
+.actions .delete-button:hover {
+  background-color: rgb(162, 58, 58);
+}
+
+.form-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #1f1f1f;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #b3b3b3;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #ffffff;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #888;
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #2980b9;
+}

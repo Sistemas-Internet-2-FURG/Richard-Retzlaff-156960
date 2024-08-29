@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:  
+  app:
+    container_name: flask_app
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      FLASK_ENV: development
+      API_SECRET_KEY: cf8ec7f9-0384-45f7-a526-233b5105f577
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_PORT: 5432
+      DB_NAME: comprai
+    networks:
+      - comprai
+    depends_on:
+      - db
+
+  db:
+    container_name: postgres
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: comprai
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./scripts/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - comprai
+
+networks:
+  comprai:
+    driver: bridge

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComprAI kkkj</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <script src="../scripts/components/header.js" defer></script>
+    <script src="../scripts/components/footer.js" defer></script>
+    <script src="../scripts/work-create.js" defer></script>
+</head>
+<body>
+    <header id="main-header"></header>
+
+    <div class="content">
+
+        <div class="form-page">
+            <div class="form-container">
+                <form id="workForm" class="form">
+                    <h2>Publicar trabalho</h2>
+                    
+                    <label for="title">Título</label>
+                    <input type="text" id="title" name="title" required>
+                    
+                    <label for="course">Disciplina</label>
+                    <select id="course" name="course" required>
+                        <option value="" disabled selected>Selecione uma disciplina</option>
+                    </select>
+                    
+                    <label for="description">Descrição</label>
+                    <textarea id="description" name="description" rows="5" required></textarea>
+                    
+                    <label for="price">Preço</label>
+                    <input type="number" id="price" name="price" min="0" step="0.01" required>
+                    
+                    <button type="submit">Publicar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer id="main-footer"></footer>    
+
+</body>
+</html>
